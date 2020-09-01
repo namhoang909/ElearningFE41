@@ -10,11 +10,7 @@ class HomeScreen extends Component {
         <h1 className="display- text-center">Danh sách khóa học</h1>
         <div className="container">
           <div className="row">
-            {this.props.courseList.map((item, index) => (
-              <div key={index} className="col-3 p-2">
-                <CourseItem item={item}/>
-              </div>
-            ))}
+            {this._renderCourseList()}
             
           </div>
         </div>
