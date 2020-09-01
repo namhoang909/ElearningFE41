@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import {userService} from "../../Services";
+import { userService } from "../../Services";
 import { signupUserSchema } from '../../Services/user';
 
 
 class SignupScreen extends Component {
   _handleSubmit = values => {
     userService.signup(values)
-    .then(res => {
-      console.log(res);
-    }).catch(err => {
-      console.log(err);
-    });
+      .then(res => {
+        console.log(res);
+      }).catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
